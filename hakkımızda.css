@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #1b4332;
+    --secondary-color: #2d5016;
+    --accent-color: #52b788;
+    --success-color: #40916c;
+    --light-green: #95d5b2;
+    --dark-green: #081c15;
+    --light-bg: #f1f8e9;
+    --dark-text: #081c15;
+    --light-text: #2d5016;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(8,28,21,0.15);
+    --shadow-hover: 0 20px 40px rgba(8,28,21,0.2);
+    --gradient: linear-gradient(135deg, #1b4332 0%, #2d5016 100%);
+    --gradient-green: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
+    --gradient-light: linear-gradient(135deg, #95d5b2 0%, #74c69d 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
+
+/* ==================== LOGO VE HEADER ==================== */
+header {
+    background: var(--gradient);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--light-green);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: fadeInLeft 1s ease-out;
+}
+
+.site-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInRight 1s ease-out;
+}
+
+/* Navigation */
+nav {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    flex: 1;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li:hover > a,
+nav ul li.active > a {
+    background: rgba(255,255,255,0.2);
+    border-bottom-color: var(--light-green);
+    transform: translateY(-2px);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 200;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content li a {
+    color: var(--dark-text);
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+.dropdown-content li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown-content li a:hover {
+    background: var(--light-bg);
+    color: var(--success-color);
+    transform: translateX(5px);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 40px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero > p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Fotoğraf grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.photo-grid img {
+    max-width: 100%;
+    max-height: 320px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--gradient);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}

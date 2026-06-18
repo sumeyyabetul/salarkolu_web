@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salarkolu Köyü - Resmi Web Sitesi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="anasayfa.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+
+    
+ 
+
+    <header>
+        <div class="header-top">
+    <!-- LOGO -->
+<a href="index.html">
+    <img src="img/logo.jpg" alt="Salarkolu Köyü Logo" class="logo">
+</a>
+
+    
+    <div class="site-title">
+        <h1>Salarkolu Köyü</h1>
+    </div>
+    
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+
+        <nav>
+            <ul id="navMenu">
+                <li class="dropdown">
+                    <a href="hakkımızda.html"><i class="fas fa-info-circle"></i> Hakkımızda</a>
+                </li>
+                <li class="dropdown">
+                    <a href="haberler.html"><i class="fas fa-newspaper"></i> Haberler</a>
+                </li>
+                <li class="dropdown">
+                    <a href="galeri.html"><i class="fas fa-images"></i> Galeri</a>
+                </li>
+                <li><a href="iletişim.html"><i class="fas fa-envelope"></i> İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero fade-in">
+            <h2>Hoş Geldiniz</h2>
+            <p>Salarkolu Köyü'nün resmi web sitesine hoş geldiniz. Buradan duyurulara, köy tarihine ve fotoğraflara ulaşabilirsiniz.</p>
+            
+            <!-- ANA SAYFA SLIDER FOTOĞRAFLARI GÜNCELLENDİ -->
+            <div class="slider">
+                <div class="slider-container" id="sliderContainer">
+                    <div class="slide active">
+                        <img src="img/foto1.jpg" alt="Köy Manzarası 1">
+                    </div>
+                    <div class="slide">
+                        <img src="img/foto2.jpg" alt="Köy Manzarası 2">
+                    </div>
+                    <div class="slide">
+                        <img src="img/foto3.jpg" alt="Köy Manzarası 3">
+                    </div>
+                    <div class="slide">
+                        <img src="img/foto4.jpg" alt="Köy Manzarası 4">
+                    </div>
+                    <div class="slide">
+                        <img src="img/foto5.jpg" alt="Köy Manzarası 5">
+                    </div>
+                    <div class="slide">
+                        <img src="img/foto6.jpg" alt="Köy Manzarası 6">
+                    </div>
+                </div>
+                
+                <button class="slider-arrow prev" id="prevSlide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-arrow next" id="nextSlide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="slider-nav" id="sliderNav"></div>
+            </div>
+
+            <div class="about-association fade-in">
+                <div class="about-card">
+                    <h3><i class="fas fa-bullseye"></i> Derneğimizin Amacı</h3>
+                    <p>Köyümüzün kültürel değerlerini yaşatmak, dayanışmayı artırmak ve gelecek nesillere güçlü bir miras bırakmaktır.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3><i class="fas fa-rocket"></i> Misyonumuz</h3>
+                    <p>Köy halkını sosyal, kültürel ve ekonomik açıdan desteklemek, birlik ve beraberliği güçlendirmek.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3><i class="fas fa-eye"></i> Vizyonumuz</h3>
+                    <p>Daha bilinçli, daha güçlü ve sürdürülebilir bir köy yaşamı inşa etmek.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <section class="news fade-in">
+                <h2>Güncel Etkinlikler</h2>
+                <div class="news-container">
+                    <article class="news-card" style="position: relative;">
+                        <div class="news-card-date">20 Eyl 2025</div>
+                        <img src="img/foto1.jpg" alt="Kültür Gecesi">
+                        <div class="news-card-content">
+                            <h3>Kültür Gecesi</h3>
+                            <p>20 Eylül 2025 tarihinde köy meydanında kültür gecesi düzenlenecektir. Geleneksel oyunlar ve müzik eşliğinde unutulmaz bir gece yaşayacağız.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-card" style="position: relative;">
+                        <div class="news-card-date">5 Eki 2025</div>
+                        <img src="img/foto2.jpg" alt="Gençlik Buluşması">
+                        <div class="news-card-content">
+                            <h3>Gençlik Buluşması</h3>
+                            <p>5 Ekim 2025'te gençler için spor ve sohbet etkinliği yapılacaktır. Futbol turnuvası ve çeşitli aktiviteler planlanmıştır.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="announcements fade-in">
+                <h2>Duyurular</h2>
+                <ul>
+                    <li>
+                        <i class="fas fa-calendar-check"></i>
+                        <strong>10 Eylül 2025:</strong> Dernek genel kurulu yapılacaktır. Tüm üyelerin katılımı önemlidir.
+                    </li>
+                    <li>
+                        <i class="fas fa-broom"></i>
+                        <strong>25 Eylül 2025:</strong> Köy temizliği etkinliği vardır. Saat 09:00'da başlayacaktır.
+                    </li>
+                    <li>
+                        <i class="fas fa-graduation-cap"></i>
+                        <strong>1 Ekim 2025:</strong> Burs başvuruları başlayacaktır. Gerekli belgeler hazırlanmalıdır.
+                    </li>
+                    <li>
+                        <i class="fas fa-heart"></i>
+                        <strong>15 Ekim 2025:</strong> Yaşlılar için sağlık kontrolü yapılacaktır.
+                    </li>
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <strong>30 Ekim 2025:</strong> Köy konseyi toplantısı düzenlenecektir.
+                    </li>
+                    <li>
+                        <i class="fas fa-seedling"></i>
+                        <strong>15 Kasım 2025:</strong> Ağaç dikme kampanyası başlatılacaktır.
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Salarkolu Köyü. Tüm hakları saklıdır. | <i class="fas fa-leaf" style="color: #52b788;"></i> Doğayla uyum içinde tasarlandı</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

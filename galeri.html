@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salarkolu Köyü - Galeri</title>
+    <link rel="stylesheet" href="galeri.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header>
+        <div class="header-top">
+            <img src="img/logo.jpg" alt="Salarkolu Köyü Logo" class="logo">
+            <div class="site-title">
+                <h1>Salarkolu Köyü</h1>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li class="dropdown">
+                    <a href="haberler.html">Haberler</a>
+                    <ul class="dropdown-content">
+                        <li><a href="haberler.html#etkinlikler">Etkinlikler</a></li>
+                        <li><a href="haberler.html#duyurular">Duyurular</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeri.html" class="active">Galeri</a></li>
+                <li><a href="iletişim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main>
+        <div class="page-title">
+            <h2>Köy Galerimiz</h2>
+            <p>Köyümüzün tarihinden, etkinliklerinden ve değerli anılarımızdan kareler</p>
+        </div>
+
+        <!-- Filtre Butonları -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-th"></i> Tümü
+            </button>
+            <button class="filter-btn" data-filter="etkinlik">
+                <i class="fas fa-calendar-alt"></i> Etkinlikler
+            </button>
+            <button class="filter-btn" data-filter="tarih">
+                <i class="fas fa-history"></i> Tarihi Anlar
+            </button>
+            <button class="filter-btn" data-filter="anma">
+                <i class="fas fa-heart"></i> Anma Törenleri
+            </button>
+            <button class="filter-btn" data-filter="doga">
+                <i class="fas fa-leaf"></i> Doğa
+            </button>
+            <button class="filter-btn" data-filter="video">
+                <i class="fas fa-play"></i> Videolar
+            </button>
+        </div>
+
+        <!-- Fotoğraf Galerisi -->
+        <section class="gallery-container">
+            
+            <!-- Etkinlik Fotoğrafları -->
+            <div class="gallery-item fade-in" data-category="etkinlik">
+                <div class="gallery-card">
+                    <img src="img/etkinlik-2024-1.jpg" alt="Bahar Festivali 2024">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Bahar Festivali 2024</h4>
+                            <p>Köy meydanında gerçekleştirilen geleneksel bahar festivali</p>
+                            <span class="gallery-date">15 Nisan 2024</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/etkinlik-2024-1.jpg', 'Bahar Festivali 2024')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="etkinlik">
+                <div class="gallery-card">
+                    <img src="img/etkinlik-2024-2.jpg" alt="Hasat Şenliği 2024">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Hasat Şenliği 2024</h4>
+                            <p>Yıllık hasat şenliği ve köylülerimizin bir araya geldiği güzel anlar</p>
+                            <span class="gallery-date">20 Ağustos 2024</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/etkinlik-2024-2.jpg', 'Hasat Şenliği 2024')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="etkinlik">
+                <div class="gallery-card">
+                    <img src="img/etkinlik-2023-1.jpg" alt="Çocuk Şenliği 2023">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Çocuk Şenliği 2023</h4>
+                            <p>Köyümüzün geleceği yavrularımız için düzenlenen özel etkinlik</p>
+                            <span class="gallery-date">23 Nisan 2023</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/etkinlik-2023-1.jpg', 'Çocuk Şenliği 2023')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarihi Anlar -->
+            <div class="gallery-item fade-in" data-category="tarih">
+                <div class="gallery-card">
+                    <img src="img/tarih-1990.jpg" alt="Köy Okulu 1990">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Köy Okulu 1990</h4>
+                            <p>1990 yılından köy okulumuza ait değerli bir anı</p>
+                            <span class="gallery-date">1990</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/tarih-1990.jpg', 'Köy Okulu 1990')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="tarih">
+                <div class="gallery-card">
+                    <img src="img/tarih-2000.jpg" alt="Köy Meydanı 2000">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Köy Meydanı 2000</h4>
+                            <p>2000 yılından köy meydanımızın eski hali</p>
+                            <span class="gallery-date">2000</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/tarih-2000.jpg', 'Köy Meydanı 2000')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anma Törenleri -->
+            <div class="gallery-item fade-in" data-category="anma">
+                <div class="gallery-card">
+                    <img src="img/anma-2024.jpg" alt="Vefat Eden Büyüklerimizi Anma 2024">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Anma Töreni 2024</h4>
+                            <p>2024 yılında vefat eden değerli büyüklerimiz için düzenlenen anma töreni</p>
+                            <span class="gallery-date">15 Kasım 2024</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/anma-2024.jpg', 'Anma Töreni 2024')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="anma">
+                <div class="gallery-card">
+                    <img src="img/anma-2023.jpg" alt="Vefat Eden Büyüklerimizi Anma 2023">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Anma Töreni 2023</h4>
+                            <p>2023 yılında vefat eden değerli büyüklerimiz için düzenlenen anma töreni</p>
+                            <span class="gallery-date">10 Aralık 2023</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/anma-2023.jpg', 'Anma Töreni 2023')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doğa Fotoğrafları -->
+            <div class="gallery-item fade-in" data-category="doga">
+                <div class="gallery-card">
+                    <img src="img/doga-1.jpg" alt="Köy Manzarası">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Köy Manzarası</h4>
+                            <p>Köyümüzün güzelliklerinden bir kare</p>
+                            <span class="gallery-date">2024</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/doga-1.jpg', 'Köy Manzarası')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="doga">
+                <div class="gallery-card">
+                    <img src="img/doga-2.jpg" alt="Tarım Arazileri">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Tarım Arazilerimiz</h4>
+                            <p>Bereketli topraklarımızdan bir görünüm</p>
+                            <span class="gallery-date">2024</span>
+                        </div>
+                        <button class="gallery-btn" onclick="openModal('img/doga-2.jpg', 'Tarım Arazileri')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Bölümü -->
+            <div class="gallery-item fade-in" data-category="video">
+                <div class="video-card">
+                    <video controls poster="img/video-poster-1.jpg">
+                        <source src="videos/etkinlik-2024.mp4" type="video/mp4">
+                        Tarayıcınız bu videoyu desteklemiyor.
+                    </video>
+                    <div class="video-info">
+                        <h4>Bahar Festivali 2024 - Özet</h4>
+                        <p>2024 bahar festivalimizden özel anlar</p>
+                        <span class="video-date">15 Nisan 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="video">
+                <div class="video-card">
+                    <video controls poster="img/video-poster-2.jpg">
+                        <source src="videos/köy-tanıtım.mp4" type="video/mp4">
+                        Tarayıcınız bu videoyu desteklemiyor.
+                    </video>
+                    <div class="video-info">
+                        <h4>Salarkolu Köyü Tanıtım</h4>
+                        <p>Köyümüzün güzelliklerini tanıtan kısa film</p>
+                        <span class="video-date">2024</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Yükleme Animasyonu -->
+        <div class="loading-more" id="loading" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p>Daha fazla içerik yükleniyor...</p>
+        </div>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <p>&copy; 2025 Salarkolu Köyü. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Filtre fonksiyonları
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Aktif butonu güncelle
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                // Öğeleri filtrele
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, 100);
+                    } else {
+                        item.classList.remove('visible');
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Modal fonksiyonları
+        function openModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+
+            modalImage.src = imageSrc;
+            modalTitle.textContent = title;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // ESC tuşu ile modal kapatma
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Lazy loading simulation
+        function loadMore() {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+
+            setTimeout(() => {
+                loading.style.display = 'none';
+                // Burada yeni içerik eklenebilir
+            }, 2000);
+        }
+
+        // Scroll to top
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+
+        // Başlangıçta tüm öğeleri göster
+        document.addEventListener('DOMContentLoaded', () => {
+            galleryItems.forEach(item => {
+                item.style.display = 'block';
+            });
+        });
+    </script>
+
+</body>
+</html>
