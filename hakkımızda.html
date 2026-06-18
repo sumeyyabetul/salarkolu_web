@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salarkolu Köyü - Resmi Web Sitesi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="hakkımızda.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+
+    
+ 
+
+    <header>
+        <div class="header-top">
+    <!-- LOGO -->
+<a href="index.html">
+    <img src="img/logo.jpg" alt="Salarkolu Köyü Logo" class="logo">
+</a>
+
+    
+    <div class="site-title">
+        <h1>Salarkolu Köyü</h1>
+    </div>
+    
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+
+        <nav>
+            <ul id="navMenu">
+                <li class="dropdown">
+                    <a href="index.html"><i class="fas fa-info-circle"></i> Anasayfa</a>
+                </li>
+                <li class="dropdown">
+                    <a href="haberler.html"><i class="fas fa-newspaper"></i> Haberler</a>
+                </li>
+                <li class="dropdown">
+                    <a href="galeri.html"><i class="fas fa-images"></i> Galeri</a>
+                </li>
+                <li><a href="iletişim.html"><i class="fas fa-envelope"></i> İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h2>Hakkımızda</h2>
+            <p>Salarkolu Köyü'nün tarihçesi, yapısı, nüfus bilgileri ve güzelliklerini keşfedin.</p>
+        </section>
+
+        <section class="history">
+            <h3>Tarihçe</h3>
+            <p>
+                Salarkolu Köyü, tarihi Osmanlı dönemine kadar uzanan köklü bir geçmişe sahiptir. 
+                Köyümüz, yüzyıllar boyunca doğal güzellikleri ve tarım faaliyetleri ile tanınmıştır.
+            </p>
+            <div class="photo-grid">
+                <img src="img/foto1.jpg" alt="Tarih Fotoğraf 1">
+                <img src="img/foto2.jpg" alt="Tarih Fotoğraf 2">
+            </div>
+        </section>
+
+        <section class="structure">
+            <h3>Köyümüzün Yapısı</h3>
+            <p>
+                Köyümüzde geleneksel taş ve ahşap evler bulunmakta olup, 
+                modern yaşam alanları da zaman içinde eklenmiştir. 
+                Köy merkezi ve çevresindeki mahalleler düzenli bir yapı içerisindedir.
+            </p>
+            <div class="photo-grid">
+                <img src="img/foto3.jpg" alt="Ev Yapısı 1">
+                <img src="img/foto4.jpg" alt="Ev Yapısı 2">
+            </div>
+        </section>
+
+        <section class="population">
+            <h3>Nüfus Bilgileri</h3>
+            <p>
+                Salarkolu Köyü'nde yaklaşık <strong>850</strong> kişi yaşamaktadır. 
+                Nüfusun büyük bir kısmı tarım ve hayvancılıkla uğraşmaktadır.
+            </p>
+            <div class="photo-grid">
+                <img src="img/foto5.jpg" alt="Köyden Manzara 1">
+                <img src="img/foto2.jpg" alt="Köyden Manzara 2">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Salarkolu Köyü. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script>
+        // Loading ekranını gizle
+        window.addEventListener("load", function() {
+            document.getElementById("loadingScreen").style.display = "none";
+        });
+
+        // Mobil menü toggle
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
